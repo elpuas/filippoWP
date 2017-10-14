@@ -1,0 +1,49 @@
+// @import "../layout/content-sidebar";
+// @import "../layout/sidebar-content";
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+@import "primary/posts-and-pages";
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+@import "primary/comments";
+
+/*--------------------------------------------------------------
+## Global Grid
+--------------------------------------------------------------*/
+.site {
+  display: grid;
+  width: 80vw;
+  height: 100vh;
+  margin: 0 auto;
+  grid-template-columns: 1;
+  grid-gap: 20px;
+  grid-template-areas: "site-header" "site-content" "site-footer";
+  .site-header {
+    grid-area: site-header;
+  }
+  .site-content {
+    grid-area: site-content;
+
+  }
+  .site-footer {
+    grid-area: site-footer;
+     align-self: end;
+  }
+}
+
+/*--------------------------------------------------------------
+# Site Header
+--------------------------------------------------------------*/
+.site-header {
+  display: inline-block;
+  .site-branding {
+    width: 60%;
+
+  }
+  .main-navigation {
+    width: 40%;
+  }
+}

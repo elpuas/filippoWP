@@ -1,0 +1,24 @@
+@import "colors";
+@import "typography";
+@import "structure";
+@import "columns";
+
+/* Branding */
+
+.site-branding {
+
+  .custom-logo {
+    min-width: 85px;
+
+  }
+  .logo-letters {
+   color: $color__white;
+   text-decoration: none;
+   position: relative;
+   top: -30px;
+   font-size: 1.5em;
+   &:visited {
+     color: $color__white;
+   }
+  }
+}
