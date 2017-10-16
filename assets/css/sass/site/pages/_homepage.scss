@@ -1,0 +1,87 @@
+.page-home {
+// Main Section
+  .entry-content {
+    margin: 100px 0 0;
+  }
+  .mc-entry-content {
+    h2 {
+      width: 50%;
+      position: absolute;
+      font-size: 4em;
+    }
+    .wp-post-image {
+      float: right;
+    }
+  }
+  // What I Do
+  .wid-entry-content {
+    .wid-meta-data {
+      display: grid;
+      img {
+        grid-row-start: 1;
+      }
+    }
+      ul {
+        grid-row-start: 1;
+        list-style: none;
+        position: absolute;
+        padding-top: 25px;
+        right: 10%;
+        li {
+
+          font-size: 4em;
+          font-family: $font__main;
+          font-weight: 900;
+        }
+      }
+  }
+  // My Work
+.mw-entry-content {
+  .mw-container {
+  display: grid;
+  grid-template-columns: 50%;
+  grid-gap: 20px 20px;
+  .my_work {
+    grid-column-start: 1;
+    min-height: 50vh;
+      &.hentry {
+        margin:0;
+      }
+  }
+  .mw-meta-data {
+    grid-row-start: 1;
+    grid-column-start: 2;
+  }
+  }
+}
+
+  // My blog
+  .mb-entry-content {
+    display: grid;
+    grid-gap: 20px 20px;
+    grid-template-columns: 50%;
+    .mb-container {
+      padding: 10px 20px;
+      &:nth-child(1) {
+        grid-column-start: 1;
+        grid-row: 1 / span 2;
+        display: grid;
+        grid-template-rows: 50%;
+        .mb-meta-data {
+          grid-row-start: 2;
+        }
+      }
+      &:nth-child(2) {
+        grid-column-start: 2;
+        grid-row-start: 1;
+      }
+      &:nth-child(3) {
+        grid-column-start: 2;
+        grid-row-start: 2;
+      }
+      &.hentry {
+        margin: 0;
+      }
+    }
+  }
+}

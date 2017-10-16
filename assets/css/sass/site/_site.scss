@@ -16,20 +16,24 @@
 .site {
   display: grid;
   width: 80vw;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0 auto;
-  grid-template-columns: 1;
-  grid-gap: 20px;
+  grid-template-columns: 1fr;
   grid-template-areas: "site-header" "site-content" "site-footer";
+  justify-content: start;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
   .site-header {
     grid-area: site-header;
+    grid-column-start: 1;
   }
   .site-content {
     grid-area: site-content;
-
+    grid-row-start: 2;
   }
   .site-footer {
-    grid-area: site-footer;
+     grid-area: site-footer;
+     grid-row-start: 3;
      align-self: end;
   }
 }
@@ -38,12 +42,44 @@
 # Site Header
 --------------------------------------------------------------*/
 .site-header {
-  display: inline-block;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    height: 15vh;
   .site-branding {
-    width: 60%;
-
+    grid-row-start: 1;
+    grid-column-start: 1;
   }
   .main-navigation {
-    width: 40%;
+    grid-row-start: 1;
+    grid-column-start: 2;
   }
+
 }
+
+/*--------------------------------------------------------------
+# Site Content
+--------------------------------------------------------------*/
+.site-content {
+    display: grid;
+    //justify-items: stretch;
+    .content-area {
+      grid-row-start: 1;
+      min-height: 70vh;
+    }
+}
+
+/*--------------------------------------------------------------
+# Site Footer
+--------------------------------------------------------------*/
+
+.site-footer {
+  height: 15vh;
+  text-align: center;
+  padding: 25px 0;
+}
+
+/*--------------------------------------------------------------
+## Page Homepage
+--------------------------------------------------------------*/
+@import "pages/homepage";

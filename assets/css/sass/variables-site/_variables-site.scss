@@ -6,19 +6,23 @@
 /* Branding */
 
 .site-branding {
+  padding-top: 2.5vh;
+ h1 {
+   margin: 0;
+   padding: 0;
+    .custom-logo {
+      min-width: 85px;
 
-  .custom-logo {
-    min-width: 85px;
-
-  }
-  .logo-letters {
-   color: $color__white;
-   text-decoration: none;
-   position: relative;
-   top: -30px;
-   font-size: 1.5em;
-   &:visited {
+    }
+    .logo-letters {
      color: $color__white;
-   }
+     text-decoration: none;
+     position: relative;
+     top: -30px;
+     font-size: 1.5em;
+     &:visited {
+       color: $color__white;
+      }
+    }
   }
 }

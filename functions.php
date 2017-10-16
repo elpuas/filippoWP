@@ -119,6 +119,8 @@ add_action( 'widgets_init', 'filippo_widgets_init' );
 function filippo_scripts() {
 	wp_enqueue_style( 'filippo-style', get_stylesheet_uri() );
  	wp_enqueue_style( 'filippo-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto:500,900', false );
+	wp_enqueue_script('jquery');
+	wp_enqueue_script( 'filippo-scripts', get_template_directory_uri() . '/custom.min.js', array(), '18121218', true );
 	wp_enqueue_script( 'filippo-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'filippo-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
@@ -164,3 +166,15 @@ function cc_mime_types($mimes) {
   return $mimes;
 }
 add_filter('upload_mimes', 'cc_mime_types');
+
+/**
+* Page Slug Body Class
+*/
+function add_slug_body_class( $classes ) {
+	global $post;
+	if ( isset( $post ) ) {
+	$classes[] = $post->post_type . '-' . $post->post_name;
+	}
+	return $classes;
+	}
+	add_filter( 'body_class', 'add_slug_body_class' );

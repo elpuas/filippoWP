@@ -18,9 +18,11 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
-*/.site-branding .custom-logo{min-width:85px}
-.site-branding .logo-letters{color:#f6f7f6;text-decoration:none;position:relative;top:-30px;font-size:1.5em}
-.site-branding .logo-letters:visited{color:#f6f7f6}
+*/.site-branding{padding-top:2.5vh}
+.site-branding h1{margin:0;padding:0}
+.site-branding h1 .custom-logo{min-width:85px}
+.site-branding h1 .logo-letters{color:#f6f7f6;text-decoration:none;position:relative;top:-30px;font-size:1.5em}
+.site-branding h1 .logo-letters:visited{color:#f6f7f6}
 html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
 body{margin:0}
 article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}
@@ -109,6 +111,9 @@ a:hover,a:active{outline:0}
 .site-main .comment-navigation,.site-main .posts-navigation,.site-main .post-navigation{margin:0 0 1.5em;overflow:hidden}
 .comment-navigation .nav-previous,.posts-navigation .nav-previous,.post-navigation .nav-previous{float:left;width:50%}
 .comment-navigation .nav-next,.posts-navigation .nav-next,.post-navigation .nav-next{float:right;text-align:right;width:50%}
+.menu-toggle{width:65px;height:65px;border-radius:100%;border:0;box-shadow:none;background-color:#01fbf2;color:#43bda1;float:right;margin-top:3vh;position:relative;z-index:1030}
+.toggled .menu-toggle{background-color:#f6f7f6;color:#01fbf2}
+.nav-menu{height:100vh;width:50vw;background-color:#01fbf2;position:absolute;z-index:1020;-webkit-transition:all 1s ease;transition:all 1s ease}
 .screen-reader-text{clip:rect(1px,1px,1px,1px);position:absolute !important;height:1px;width:1px;overflow:hidden;word-wrap:normal !important}
 .screen-reader-text:focus{background-color:#f1f1f1;border-radius:3px;box-shadow:0 0 2px 2px rgba(0,0,0,0.6);clip:auto !important;color:#21759b;display:block;font-size:21px;font-size:.875rem;font-weight:bold;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}
 #content[tabindex="-1"]:focus{outline:0}
@@ -126,13 +131,34 @@ a:hover,a:active{outline:0}
 .page-links{clear:both;margin:0 0 1.5em}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
-.site{display:-ms-grid;display:grid;width:80vw;height:100vh;margin:0 auto;-ms-grid-columns:1;grid-template-columns:1;grid-gap:20px;grid-template-areas:"site-header" "site-content" "site-footer"}
-.site .site-header{grid-area:site-header}
-.site .site-content{grid-area:site-content}
-.site .site-footer{grid-area:site-footer;-webkit-align-self:end;-ms-flex-item-align:end;-ms-grid-row-align:end;align-self:end}
-.site-header{display:inline-block}
-.site-header .site-branding{width:60%}
-.site-header .main-navigation{width:40%}
+.site{display:-ms-grid;display:grid;width:80vw;min-height:100vh;margin:0 auto;-ms-grid-columns:1fr;grid-template-columns:1fr;grid-template-areas:"site-header" "site-content" "site-footer";-webkit-box-pack:start;-webkit-justify-content:start;-ms-flex-pack:start;justify-content:start;grid-column-gap:10px;grid-row-gap:10px}
+.site .site-header{grid-area:site-header;-ms-grid-column:1;grid-column-start:1}
+.site .site-content{grid-area:site-content;-ms-grid-row:2;grid-row-start:2}
+.site .site-footer{grid-area:site-footer;-ms-grid-row:3;grid-row-start:3;-webkit-align-self:end;-ms-flex-item-align:end;-ms-grid-row-align:end;align-self:end}
+.site-header{display:-ms-grid;display:grid;-ms-grid-columns:1fr 1fr;grid-template-columns:1fr 1fr;-ms-grid-rows:1fr;grid-template-rows:1fr;height:15vh}
+.site-header .site-branding{-ms-grid-row:1;grid-row-start:1;-ms-grid-column:1;grid-column-start:1}
+.site-header .main-navigation{-ms-grid-row:1;grid-row-start:1;-ms-grid-column:2;grid-column-start:2}
+.site-content{display:-ms-grid;display:grid}
+.site-content .content-area{-ms-grid-row:1;grid-row-start:1;min-height:70vh}
+.site-footer{height:15vh;text-align:center;padding:25px 0}
+.page-home .entry-content{margin:100px 0 0}
+.page-home .mc-entry-content h2{width:50%;position:absolute;font-size:4em}
+.page-home .mc-entry-content .wp-post-image{float:right}
+.page-home .wid-entry-content .wid-meta-data{display:-ms-grid;display:grid}
+.page-home .wid-entry-content .wid-meta-data img{-ms-grid-row:1;grid-row-start:1}
+.page-home .wid-entry-content ul{-ms-grid-row:1;grid-row-start:1;list-style:none;position:absolute;padding-top:25px;right:10%}
+.page-home .wid-entry-content ul li{font-size:4em;font-family:"Roboto",sans-serif;font-weight:900}
+.page-home .mw-entry-content .mw-container{display:-ms-grid;display:grid;-ms-grid-columns:50%;grid-template-columns:50%;grid-gap:20px 20px}
+.page-home .mw-entry-content .mw-container .my_work{-ms-grid-column:1;grid-column-start:1;min-height:50vh}
+.page-home .mw-entry-content .mw-container .my_work.hentry{margin:0}
+.page-home .mw-entry-content .mw-container .mw-meta-data{-ms-grid-row:1;grid-row-start:1;-ms-grid-column:2;grid-column-start:2}
+.page-home .mb-entry-content{display:-ms-grid;display:grid;grid-gap:20px 20px;-ms-grid-columns:50%;grid-template-columns:50%}
+.page-home .mb-entry-content .mb-container{padding:10px 20px}
+.page-home .mb-entry-content .mb-container:nth-child(1){-ms-grid-column:1;grid-column-start:1;-ms-grid-row-span:2;-ms-grid-row:1;grid-row:1 / span 2;display:-ms-grid;display:grid;-ms-grid-rows:50%;grid-template-rows:50%}
+.page-home .mb-entry-content .mb-container:nth-child(1) .mb-meta-data{-ms-grid-row:2;grid-row-start:2}
+.page-home .mb-entry-content .mb-container:nth-child(2){-ms-grid-column:2;grid-column-start:2;-ms-grid-row:1;grid-row-start:1}
+.page-home .mb-entry-content .mb-container:nth-child(3){-ms-grid-column:2;grid-column-start:2;-ms-grid-row:2;grid-row-start:2}
+.page-home .mb-entry-content .mb-container.hentry{margin:0}
 .infinite-scroll .posts-navigation,.infinite-scroll.neverending .site-footer{display:none}
 .infinity-end.neverending .site-footer{display:block}
 .page-content .wp-smiley,.entry-content .wp-smiley,.comment-content .wp-smiley{border:0;margin-bottom:0;margin-top:0;padding:0}
