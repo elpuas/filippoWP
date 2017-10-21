@@ -179,3 +179,14 @@ embed,iframe,object{max-width:100%}
 .gallery-columns-8 .gallery-item{max-width:12.5%}
 .gallery-columns-9 .gallery-item{max-width:11.11%}
 .gallery-caption{display:block}
+@-webkit-keyframes color-me-in{0%{background:orange}
+25%{background:blue}
+50%{background:black}
+75%{background:purple}
+100%{background:orange}
+}@keyframes color-me-in{0%{background:orange}
+25%{background:blue}
+50%{background:black}
+75%{background:purple}
+100%{background:orange}
+}

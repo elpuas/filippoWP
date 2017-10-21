@@ -118,9 +118,14 @@ add_action( 'widgets_init', 'filippo_widgets_init' );
  */
 function filippo_scripts() {
 	wp_enqueue_style( 'filippo-style', get_stylesheet_uri() );
- 	wp_enqueue_style( 'filippo-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto:500,900', false );
-	wp_enqueue_script('jquery');
-	wp_enqueue_script( 'filippo-scripts', get_template_directory_uri() . '/custom.min.js', array(), '18121218', true );
+ 	wp_enqueue_style( 'filippo-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto:500,900', true );
+	if( !is_admin()) {
+		 wp_deregister_script('jquery');
+		 wp_register_script('jquery', get_stylesheet_directory_uri() . '/js/jquery-3.2.1.min.js');
+		 wp_enqueue_script('jquery', '3.2.1', true);
+	}
+	wp_enqueue_script( 'filippo-vendor-scripts', get_template_directory_uri() . '/vendors.min.js', array(), '1.0.0', true );
+	wp_enqueue_script( 'filippo-scripts', get_template_directory_uri() . '/custom.js', array(), '1.0.1', true );
 	wp_enqueue_script( 'filippo-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'filippo-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
