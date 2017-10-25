@@ -5,9 +5,20 @@ jQuery( document ).ready(function( $ ) {
   });
   // TypeIt.js
   $('#heroText').typeIt({
-    strings: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac varius ipsum. Praesent a blandit enim."],
+    strings: ["​Full Stack Designer & Front-end Dev, I’m a Web Artisan and WordPress Wrangler."],
     speed: 50,
+    breakLines: false,
     autoStart: false,
-    loopDelay: 750
+    loopDelay: 750,
+    loop: false
   });
+  // Nav Bar
+    var $menuRevealBtn = $('.menu-toggle');
+    var $sideNav = $('#side-nav');
+    var $sideNavMask = $('#side-nav-mask');
+
+    $menuRevealBtn.on('click', function() {
+      $sideNav.toggleClass('visible');
+      $sideNavMask.toggleClass('visible');
+    });
 });

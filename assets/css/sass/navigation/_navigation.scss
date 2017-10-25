@@ -7,3 +7,81 @@
 ## Menus
 --------------------------------------------------------------*/
 @import "menus";
+
+
+
+body, html {
+  height: 100%;
+  // color: white;
+  //font-family: 'Source Sans Pro', 'sans-serif';
+}
+
+$z-index-high: 3;
+$z-index-medium: 2;
+$z-index-low: 1;
+
+$padding-default: 15px;
+
+$timing: 300ms;
+$timing-function: cubic-bezier(.4,0,.2,1);
+
+#side-nav {
+  color: black;
+  position: fixed;
+  z-index: 4;
+  bottom: 0;
+  top: 0;
+  padding: $padding-default;
+  width: 50vw;
+  background: white;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transition: all $timing;
+  transition-timing-function: $timing-function;
+  transform: translateX(100vw);
+
+  &.visible {
+    transform: translateX(50vw);
+  }
+}
+
+#side-nav-mask {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,.5);
+  left: 0;
+  top: 0;
+  opacity: .1;
+  visibility: hidden;
+  z-index: $z-index-medium;
+  transition: all $timing $timing-function;
+  transform: translateZ(0);
+
+  &.visible {
+    transition-delay: 0;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+#content {
+  // height: 100vh;
+  // background-color: lightblue;
+  position: relative;
+
+  .btn-close {
+    height: 45px;
+    width: 45px;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+
+    &:focus {
+      outline: 1px solid gray;
+    }
+  }
+}
