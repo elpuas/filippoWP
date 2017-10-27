@@ -20,10 +20,14 @@
      text-decoration: none;
      position: relative;
      top: -30px;
-     font-size: 1.5em;
      &:visited {
        color: $color__white;
       }
     }
   }
+}
+
+/* Images */
+.image-responsive {
+  width: 100%;
 }
