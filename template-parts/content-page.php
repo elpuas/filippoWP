@@ -25,63 +25,22 @@ $post_slug=$post->post_name;?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content mc-entry-content">
+		<div class="col-span-6">
 		<?php
 			the_content();
-			the_post_thumbnail('full', array('class' => 'image-responsive'));
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'filippo' ),
 				'after'  => '</div>',
 			) );
-		?>
-	</div><!-- .mc-content -->
-	<?php if(is_home) { ?>
-	<div class="entry-content wid-entry-content">
-		<?php if( have_rows('what_i_do_field') ):
-			while( have_rows('what_i_do_field') ): the_row();
-			// vars
-			$imageWID = get_sub_field('wid_image');
-			$contentWID = get_sub_field('wid_content');
 			?>
-			<div class="wid-meta-data">
-				<img class="image-responsive wid-post-image" src="<?php echo $imageWID; ?>" />
-				<?php echo $contentWID; ?>
-			</div>
-		<?php endwhile; ?>
-	<?php endif; ?>
-</div><!-- .wid-entry-content -->
-<div class="entry-content mw-entry-content">
-	<?php
-	$myWorks = array( 'post_type' => 'my_work', 'posts_per_page' => 3 );
-	$loop = new WP_Query($myWorks);
-	while ( $loop -> have_posts() ) : $loop -> the_post(); ?>
-	<div class="mw-container">
-		<div id="post-<?php the_ID(); ?>" <?php post_class() ?> style="background-image:url('<?php the_post_thumbnail_url(); ?>')">
 		</div>
-		<div class="mw-meta-data">
-		<h2> <?php the_title(); ?> </h2>
-		<?php the_excerpt(); ?>
+		<div class="col-span-6">
+		<?php the_post_thumbnail('full', array('class' => 'image-responsive')); ?>
 		</div>
-	</div>
-	<?php
-	endwhile;
-	?>
-</div><!-- .mw-entry-content -->
-<div class="entry-content mb-entry-content">
-<?php
- $myBlog = array('post_per_page' => 3, 'category_name' => 'blog');
- $blogLoop = new WP_Query($myBlog);
- while ( $blogLoop -> have_posts() ) : $blogLoop -> the_post(); ?>
- <div id="post-<?php the_ID();?>" <?php post_class('mb-container') ?> style="background-image:url('<?php the_post_thumbnail_url(); ?>')">
-		<div class="mb-meta-data">
-			<h2> <?php the_title(); ?> </h2>
-			<?php the_excerpt(); ?>
-		</div>
- </div>
- <?php endwhile;
-	wp_reset_postdata();
- ?>
-</div><!-- .mb-entry-content -->
-	<?php } else {
+	</div><!-- .mc-content -->
+	<?php if(is_home) {
+			get_template_part('template-parts/content-homepage');
+	 } else {
 			// Do Nothing
 			} ?>
 	<?php if ( get_edit_post_link() ) : ?>

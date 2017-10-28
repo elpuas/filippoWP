@@ -21,4 +21,9 @@ jQuery( document ).ready(function( $ ) {
       $sideNav.toggleClass('visible');
       $sideNavMask.toggleClass('visible');
     });
+  // Slider
+  $('.carousel-inner .carousel-item:first').addClass('active');
+  $('.carousel').carousel({
+  interval: 2000
+});
 });

@@ -1,0 +1,108 @@
+/*--------------------------------------------------------------
+## Global Grid
+--------------------------------------------------------------*/
+.site {
+  display: grid;
+  min-height: 100vh;
+  margin: 0 auto;
+  grid-template-columns:1fr;
+  grid-template-areas: "site-header" "site-content" "site-footer";
+  justify-content: start;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  .site-header {
+    grid-area: site-header;
+    grid-column-start: 1;
+    width: 100vw;
+    max-width: 1280px;
+    margin: 0 auto;
+
+  }
+  .site-content {
+    grid-area: site-content;
+    grid-row-start: 2;
+    width: 100vw;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  .site-footer {
+     grid-area: site-footer;
+     grid-row-start: 3;
+     align-self: end;
+     width: 100vw;
+     max-width: 1280px;
+     margin: 0 auto;
+  }
+}
+
+/*--------------------------------------------------------------
+# Site Header
+--------------------------------------------------------------*/
+.site-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    height: 15vh;
+  .site-branding {
+    grid-row-start: 1;
+    grid-column-start: 1;
+  }
+  .main-navigation {
+    grid-row-start: 1;
+    grid-column-start: 2;
+  }
+
+}
+
+/*--------------------------------------------------------------
+# Site Content
+--------------------------------------------------------------*/
+.site-content {
+    .entry-content {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-areas: "col-start col-start col-start col-start col-start col-start col-start col-start col-start col-start";
+      grid-gap: 20px;
+      // Grid 12 Columns
+      .col-span-4 {
+        grid-column: col-start / span 4;
+      }
+      .col-span-5 {
+        grid-column: col-start / span 5;
+      }
+      .col-span-6 {
+        grid-column: col-start / span 6;
+      }
+      .col-span-7 {
+        grid-column: col-start / span 7;
+      }
+      .col-span-8 {
+        grid-column: col-start / span 8;
+      }
+      .col-span-9 {
+        grid-column: col-start / span 9;
+      }
+      .col-span-10 {
+        grid-column: col-start / span 10;
+      }
+      .col-span-11 {
+        grid-column: col-start / span 11;
+      }
+      .col-span-12 {
+        grid-column: col-start / span 12;
+      }
+    }
+  }
+
+
+@media (max-width: 900px) {
+  .site-content {
+    .entry-content {
+      grid-template-columns: 1fr;
+      grid-template-areas: "col-start";
+      .col-span-4, .col-span-5, .col-span-6, .col-span-7, .col-span-8,.col-span-9, .col-span-10, .col-span-11, .col-span-12 {
+        grid-column: col-start / span 12;
+      }
+    }
+  }
+}
