@@ -199,7 +199,7 @@ body,html{height:100%}
 .page-home .entry-content.wid-entry-content .col-span-6:nth-child(2){-ms-grid-column-span:7;-ms-grid-column:col-start;grid-column:col-start / span 7;-ms-grid-column:5;grid-column-start:5;-ms-grid-row:1;grid-row-start:1}
 .page-home .entry-content.wid-entry-content ul{list-style:none;margin:0;padding:0}
 .page-home .entry-content.wid-entry-content ul li h2{padding:0;margin:0}
-.page-home .entry-content.mw-entry-content .my_work.hentry{margin:0}
+.page-home .entry-content.mw-entry-content .my_work.hentry{margin:0;max-height:75vh}
 .page-home .entry-content.mb-entry-content{-ms-grid-rows:300px 300px;grid-template-rows:300px 300px}
 .page-home .entry-content.mb-entry-content .col-span-6:nth-child(1){-ms-grid-row-span:2;grid-row-end:span 2;-ms-grid-column:1;grid-column-start:1;-ms-grid-row:1;grid-row-start:1}
 .page-home .entry-content.mb-entry-content .col-span-6:nth-child(1) .mb-meta-data{padding-top:350px}

@@ -22,7 +22,7 @@ jQuery( document ).ready(function( $ ) {
       $sideNavMask.toggleClass('visible');
     });
   // Slider
-  $('.carousel-inner .carousel-item:first').addClass('active');
+  // $('.carousel-inner .carousel-item:first').addClass('active');
   $('.carousel').carousel({
   interval: 2000
 });
