@@ -34,7 +34,7 @@
 		 </h1>
 		</div><!-- .site-branding -->
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle"> . </button>
+			<button class="menu-toggle"><img src="<?php echo get_bloginfo('template_url') ?>/assets/img/open-menu.svg"></button>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 	<div id="side-nav-mask"></div>

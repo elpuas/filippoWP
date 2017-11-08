@@ -59,6 +59,7 @@
         <div class="mb-meta-data">
           <h2> <?php the_title(); ?> </h2>
           <?php the_excerpt(); ?>
+          <span><a href="<?php the_permalink(); ?>"><img src="<?php echo get_bloginfo('template_url') ?>/assets/img/open.svg"></a></span>
         </div>
       </div>
     </div>
