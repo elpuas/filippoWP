@@ -118,7 +118,7 @@ add_action( 'widgets_init', 'filippo_widgets_init' );
  */
 function filippo_scripts() {
 	wp_enqueue_style( 'filippo-style', get_stylesheet_uri() );
- 	wp_enqueue_style( 'filippo-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto:500,900', true );
+ 	wp_enqueue_style( 'filippo-google-fonts', 'https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400', true );
 	if( !is_admin()) {
 		 wp_deregister_script('jquery');
 		 wp_register_script('jquery', get_stylesheet_directory_uri() . '/js/jquery-3.2.1.min.js');
