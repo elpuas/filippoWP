@@ -24,6 +24,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 .site-branding h1 .logo-letters{color:#f6f7f6;text-decoration:none;position:relative;top:-30px}
 .site-branding h1 .logo-letters:visited{color:#f6f7f6}
 .image-responsive{width:100%}
+.site-branding h1{font-size:48px}
 html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
 body{margin:0}
 article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}
@@ -63,11 +64,10 @@ textarea{overflow:auto}
 optgroup{font-weight:bold}
 table{border-collapse:collapse;border-spacing:0}
 td,th{padding:0}
-body,button,input,select,optgroup,textarea{color:#f6f7f6;font-family:"Source Code Pro",monospace;font-size:calc(18px + 6 * ((100vw - 420px) / 860));line-height:1.5}
-h1,h2,h3,h4,h5,h6{clear:both}
-h1{font-size:calc(72px + 18 * ((100vw - 420px) / 860))}
-h2{font-size:calc(48px + 24 * ((100vw - 420px) / 860))}
-.site-branding h1{font-size:calc(36px + 12 * ((100vw - 420px) / 860))}
+body,button,input,select,optgroup,textarea{color:#f6f7f6;font-family:"Source Code Pro",monospace;font-size:calc(16px + 6 * ((100vw - 420px) / 860));line-height:1.5}
+h1,h2,h3,h4,h5,h6{clear:both;font-family:"Roboto",sans-serif}
+h1{font-size:calc(48px + 24 * ((100vw - 420px) / 860))}
+h2{font-size:calc(36px + 12 * ((100vw - 420px) / 860))}
 p{margin-bottom:1.5em}
 dfn,cite,em,i{font-style:italic}
 blockquote{margin:0 1.5em}
@@ -191,10 +191,11 @@ body,html{height:100%}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
 .site-footer{height:15vh;text-align:center;padding:25px 0}
+.page-home{background-image:url("assets/img/4_1.jpg");background-size:cover;background-attachment:fixed;background-blend-mode:multiply}
 .page-home .entry-content{margin:100px 0 0}
-.page-home .entry-content.mc-entry-content .col-span-6:nth-child(1){-ms-grid-column-span:8;-ms-grid-column:col-start;grid-column:col-start / span 8;-ms-grid-row:1;grid-row-start:1;-ms-grid-column:2;grid-column-start:2}
+.page-home .entry-content.mc-entry-content .col-span-6:nth-child(1){-ms-grid-column-span:6;-ms-grid-column:col-start;grid-column:col-start / span 6;-ms-grid-row:1;grid-row-start:1;-ms-grid-column:2;grid-column-start:2}
 .page-home .entry-content.mc-entry-content .col-span-6:nth-child(2){-ms-grid-row:1;grid-row-start:1;-ms-grid-column-span:5;-ms-grid-column:7;grid-column:7 / span 5}
-.page-home .entry-content.mc-entry-content h2{text-indent:-15px;letter-spacing:-3px}
+.page-home .entry-content.mc-entry-content h2{text-indent:-5px}
 .page-home .entry-content.wid-entry-content .col-span-6:nth-child(1){-ms-grid-column:1;grid-column-start:1;-ms-grid-row:1;grid-row-start:1}
 .page-home .entry-content.wid-entry-content .col-span-6:nth-child(2){-ms-grid-column-span:7;-ms-grid-column:col-start;grid-column:col-start / span 7;-ms-grid-column:5;grid-column-start:5;-ms-grid-row:1;grid-row-start:1}
 .page-home .entry-content.wid-entry-content ul{list-style:none;margin:0;padding:0}
@@ -320,10 +321,9 @@ embed,iframe,object{max-width:100%}
 .carousel-control .glyphicon-chevron-right,.carousel-control .icon-next{margin-right:-15px}
 .carousel-caption{right:20%;left:20%;padding-bottom:30px}
 .carousel-indicators{bottom:20px}
-}@media screen and (min-width:1280px){body,button,input,select,optgroup,textarea{font-size:24px}
-h1{font-size:90px}
-h2{font-size:72px}
-.site-branding h1{font-size:48px}
+}@media screen and (min-width:1280px){body,button,input,select,optgroup,textarea{font-size:22px}
+h1{font-size:72px}
+h2{font-size:48px}
 pre{font-size:24px}
 code,kbd,tt,var{font-size:24px}
 button,input[type="button"],input[type="reset"],input[type="submit"]{font-size:24px}
@@ -331,10 +331,9 @@ button,input[type="button"],input[type="reset"],input[type="submit"]{font-size:2
 .page-home .entry-content.mb-entry-content .col-span-6 .mb-meta-data h2{font-size:36px}
 }@media(max-width:900px){.site-content .entry-content{-ms-grid-columns:1fr;grid-template-columns:1fr;grid-template-areas:"col-start"}
 .site-content .entry-content .col-span-4,.site-content .entry-content .col-span-5,.site-content .entry-content .col-span-6,.site-content .entry-content .col-span-7,.site-content .entry-content .col-span-8,.site-content .entry-content .col-span-9,.site-content .entry-content .col-span-10,.site-content .entry-content .col-span-11,.site-content .entry-content .col-span-12{-ms-grid-column-span:12;-ms-grid-column:col-start;grid-column:col-start / span 12}
-}@media screen and (max-width:420px){body,button,input,select,optgroup,textarea{font-size:18px}
-h1{font-size:72px}
-h2{font-size:48px}
-.site-branding h1{font-size:36px}
+}@media screen and (max-width:420px){body,button,input,select,optgroup,textarea{font-size:16px}
+h1{font-size:48px}
+h2{font-size:36px}
 pre{font-size:18px}
 code,kbd,tt,var{font-size:18px}
 button,input[type="button"],input[type="reset"],input[type="submit"]{font-size:18px}

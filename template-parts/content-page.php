@@ -35,7 +35,7 @@ $post_slug=$post->post_name;?>
 			?>
 		</div>
 		<div class="col-span-6">
-		<?php the_post_thumbnail('full', array('class' => 'image-responsive')); ?>
+		<?php /* the_post_thumbnail('full', array('class' => 'image-responsive')); */ ?>
 		</div>
 	</div><!-- .mc-content -->
 	<?php if(is_home) {
