@@ -18,13 +18,11 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
-*/.site-branding{padding-top:2.5vh}
-.site-branding h1{margin:0;padding:0}
-.site-branding h1 .custom-logo{min-width:85px}
-.site-branding h1 .logo-letters{color:#f6f7f6;text-decoration:none;position:relative;top:-30px}
+*/.site-branding h1{margin:0;padding:0}
+.site-branding h1 .custom-logo{min-width:50px}
+.site-branding h1 .logo-letters{color:#f6f7f6;text-decoration:none;position:relative;font-size:24px;top:-15px}
 .site-branding h1 .logo-letters:visited{color:#f6f7f6}
 .image-responsive{width:100%}
-.site-branding h1{font-size:48px}
 html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
 body{margin:0}
 article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}
@@ -191,7 +189,7 @@ body,html{height:100%}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
 .site-footer{height:15vh;text-align:center;padding:25px 0}
-.page-home{background-image:url("assets/img/4_1.jpg");background-size:cover;background-attachment:fixed;background-blend-mode:multiply}
+.page-home{background-image:url("assets/img/4_1.jpg");background-size:cover;background-attachment:fixed;background-blend-mode:multiply;-webkit-transition:all .5s linear;transition:all .5s linear;background-position:-100px}
 .page-home .entry-content{margin:100px 0 0}
 .page-home .entry-content.mc-entry-content .col-span-6:nth-child(1){-ms-grid-column-span:6;-ms-grid-column:col-start;grid-column:col-start / span 6;-ms-grid-row:1;grid-row-start:1;-ms-grid-column:2;grid-column-start:2}
 .page-home .entry-content.mc-entry-content .col-span-6:nth-child(2){-ms-grid-row:1;grid-row-start:1;-ms-grid-column-span:5;-ms-grid-column:7;grid-column:7 / span 5}
@@ -200,7 +198,8 @@ body,html{height:100%}
 .page-home .entry-content.wid-entry-content .col-span-6:nth-child(2){-ms-grid-column-span:7;-ms-grid-column:col-start;grid-column:col-start / span 7;-ms-grid-column:5;grid-column-start:5;-ms-grid-row:1;grid-row-start:1}
 .page-home .entry-content.wid-entry-content ul{list-style:none;margin:0;padding:0}
 .page-home .entry-content.wid-entry-content ul li h2{padding:0;margin:0}
-.page-home .entry-content.mw-entry-content .my_work.hentry{margin:0;max-height:75vh}
+.page-home .entry-content.mw-entry-content .col-span-12 .filo-carousel--layer .my_work.hentry{margin:0;max-height:75vh}
+.page-home .entry-content.mw-entry-content .col-span-12 .filo-carousel--post-link{display:block;max-width:50px}
 .page-home .entry-content.mb-entry-content{-ms-grid-rows:300px 300px;grid-template-rows:300px 300px}
 .page-home .entry-content.mb-entry-content .col-span-6:nth-child(1){-ms-grid-row-span:2;grid-row-end:span 2;-ms-grid-column:1;grid-column-start:1;-ms-grid-row:1;grid-row-start:1}
 .page-home .entry-content.mb-entry-content .col-span-6:nth-child(1) .mb-meta-data{padding-top:350px}

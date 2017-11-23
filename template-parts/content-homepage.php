@@ -5,9 +5,11 @@
     $imageWID = get_sub_field('wid_image');
     $contentWID = get_sub_field('wid_content');
     ?>
+    <!-- * remove feature image
       <div class="col-span-6">
         <img class="image-responsive wid-post-image" src="<?php echo $imageWID; ?>" />
       </div>
+     -->
       <div class="col-span-6">
         <?php echo $contentWID; ?>
       </div>
@@ -17,7 +19,7 @@
 
 
 <div class="entry-content mw-entry-content">
-  <div id="mw-hp-carousel" class="carousel slide col-span-12" data-ride="carousel">
+  <div id="mw-carousel" class="carousel slide col-span-12" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
     <?php
     $myWorks = array( 'post_type' => 'my_work', 'posts_per_page' => 3 );
@@ -30,6 +32,7 @@
                 <h2> <?php the_title(); ?> </h2>
                 <?php the_excerpt(); ?>
             </div><!-- carousel-caption -->
+            
         </div><!-- .item #<?php the_ID(); ?> -->
     <?php
     $count++;

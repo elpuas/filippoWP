@@ -34,7 +34,7 @@ jQuery( document ).ready(function( $ ) {
   var WidCoord = $(elements[1]).offset().top;
   var MWCoord = $(elements[2]).offset().top;
   var MBCoord = $(elements[3]).offset().top;
-
+  // Scroll Function
   $(document).scroll(function() {
     // Round to the Nearest Integer
     var mContent = Math.round(MCCoord);
@@ -45,20 +45,25 @@ jQuery( document ).ready(function( $ ) {
     var scrll = $(document).scrollTop();
     // Conditionals
     if ( scrll >= 0 && scrll < whtIDoContent  ) {
-       $('body').css({'background-color' : '#43bda1' , 'background-image' : 'url(http://localhost:3000/elpuas.dev/wp-content/themes/filippo/assets/img/4_1.jpg)'});
-       console.log('top');
+       $('body').css({'background-color' : '#43bda1' , 'background-image' : 'url(http://localhost:8080/elpuas.dev/wp-content/themes/filippo/assets/img/4_1.jpg)'});
+       // console.log('top');
     }
     if ( scrll >= whtIDoContent ) {
-       $('body').css({'background-color' : 'orange', 'background-image' : 'url(http://localhost:3000/elpuas.dev/wp-content/themes/filippo/assets/img/7_1.jpg)' });
-         console.log('what i do section');
+       $('body').css({'background-color' : 'orange', 'background-image' : 'url(http://localhost:8080/elpuas.dev/wp-content/themes/filippo/assets/img/7_1.jpg)' });
+         // console.log('what i do section');
     }
     if (scrll >= mWorkContent) {
         $('body').css('background-color', 'blue');
-         console.log('my work section');
+         // console.log('my work section');
     }
     if ( scrll >= mBlogContent ) {
       $('body').css('background-color', 'purple');
-          console.log('myBlog section');
+          // console.log('myBlog section');
     }
   });
+  // Calculate Vierport height
+
+     var viewportHeight = $(window).height();
+     $('.entry-content').css('min-height', (viewportHeight / 1.5 ));
+
 });

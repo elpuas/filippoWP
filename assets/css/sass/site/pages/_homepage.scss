@@ -3,6 +3,8 @@
      background-size: cover;
      background-attachment: fixed;
      background-blend-mode: multiply;
+     transition: all 0.5s linear;
+     background-position: -100px;
 // Above the Fold
   .entry-content {
     margin: 100px 0 0;
@@ -50,13 +52,22 @@
 &.mw-entry-content {
   .col-span-12 {
     &.mw-carousel {
-   }
-  }
-  .my_work {
-    &.hentry {
-      margin: 0;
-      max-height: 75vh;
+    }
+    .filo-carousel--layer {
+    .my_work {
+      &.hentry {
+        margin: 0;
+        max-height: 75vh;
+          }
+        }
       }
+      .filo-carousel--caption {
+
+      }
+     .filo-carousel--post-link {
+       display: block;
+       max-width: 50px;
+     }
     }
   }
 
