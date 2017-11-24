@@ -4,10 +4,13 @@
      background-attachment: fixed;
      background-blend-mode: multiply;
      transition: all 0.5s linear;
+<<<<<<< HEAD
      background-position: -100px;
+=======
+>>>>>>> HEAD@{1}
 // Above the Fold
   .entry-content {
-    margin: 100px 0 0;
+    padding: 100px 0 100px;
     &.mc-entry-content {
       .col-span-6:nth-child(1) {
         grid-column: col-start / span 6;
@@ -50,6 +53,7 @@
   }
   // My Work
 &.mw-entry-content {
+<<<<<<< HEAD
   .col-span-12 {
     &.mw-carousel {
     }
@@ -63,6 +67,46 @@
       }
       .filo-carousel--caption {
 
+=======
+  .carousel {
+    grid-column-start: 2;
+    .filo-carousel--img {
+      max-width: 50%;
+    }
+    .carousel-caption {
+      max-width: 50%;
+      text-align: left;
+      left: 50%;
+      right: 0;
+      padding: 20px;
+      top: 25%;
+      h2, p {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+    .filo-carousel--post-link {
+      max-width: 50px;
+      display: block;
+      margin-top: 20px;
+    }
+    .filo-carousel--controls {
+      text-align: right;
+      margin-top: -50px;
+      padding: 0 20px;
+      .carousel-control {
+        background-image: none;
+        position: initial;
+        max-width: 50px;
+        display: inline-block;
+        opacity: .9;
+        &.left {
+          margin-right: 50px;
+        }
+>>>>>>> HEAD@{1}
       }
      .filo-carousel--post-link {
        display: block;
@@ -70,6 +114,8 @@
      }
     }
   }
+}
+
 
   // My blog
     &.mb-entry-content {

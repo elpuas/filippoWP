@@ -110,6 +110,15 @@ function filippo_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array (
+		'name'				=> esc_html__('Menu Widget', 'filippo'),
+		'id'            => 'menu-widget',
+		'description'   => esc_html__( 'Add widgets here.', 'filippo' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	));
 }
 add_action( 'widgets_init', 'filippo_widgets_init' );
 
@@ -118,7 +127,7 @@ add_action( 'widgets_init', 'filippo_widgets_init' );
  */
 function filippo_scripts() {
 	wp_enqueue_style( 'filippo-style', get_stylesheet_uri() );
- 	wp_enqueue_style( 'filippo-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto:900|Source+Code+Pro', true );
+ 	wp_enqueue_style( 'filippo-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto:900|Montserrat', true );
 	if( !is_admin()) {
 		 wp_deregister_script('jquery');
 		 wp_register_script('jquery', get_stylesheet_directory_uri() . '/js/jquery-3.2.1.min.js');

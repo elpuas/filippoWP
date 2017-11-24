@@ -107,6 +107,7 @@
 }
 
 
+// Menu Toogle button
 
 .menu-toggle {
     width: 65px;
@@ -114,14 +115,15 @@
     border-radius: 100%;
     border: none;
     box-shadow: none;
-    background-color: $color__blue;
-    color: $color__green;
-		float: right;
-		margin-top: 3vh;
-		position: relative;
-		padding: 6px 3px 0;
-    overflow: hidden;
+    background-color: transparent;
+		position: fixed;
+		bottom: 25px;
+		right: 25px;
 		z-index: 1030;
+		padding: 0;
+		&:focus {
+			border: none;
+		}
 }
 
 .toggled .menu-toggle {
