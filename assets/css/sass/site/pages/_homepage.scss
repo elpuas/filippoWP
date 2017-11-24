@@ -4,10 +4,6 @@
      background-attachment: fixed;
      background-blend-mode: multiply;
      transition: all 0.5s linear;
-<<<<<<< HEAD
-     background-position: -100px;
-=======
->>>>>>> HEAD@{1}
 // Above the Fold
   .entry-content {
     padding: 100px 0 100px;
@@ -29,7 +25,7 @@
   // What I Do
   &.wid-entry-content {
     .col-span-6:nth-child(1) {
-        grid-column-start: 1;
+        grid-column-start: 6;
         grid-row-start: 1;
       }
     .col-span-6:nth-child(2) {
@@ -53,21 +49,6 @@
   }
   // My Work
 &.mw-entry-content {
-<<<<<<< HEAD
-  .col-span-12 {
-    &.mw-carousel {
-    }
-    .filo-carousel--layer {
-    .my_work {
-      &.hentry {
-        margin: 0;
-        max-height: 75vh;
-          }
-        }
-      }
-      .filo-carousel--caption {
-
-=======
   .carousel {
     grid-column-start: 2;
     .filo-carousel--img {
@@ -106,15 +87,11 @@
         &.left {
           margin-right: 50px;
         }
->>>>>>> HEAD@{1}
       }
-     .filo-carousel--post-link {
-       display: block;
-       max-width: 50px;
-     }
     }
-  }
-}
+   }
+ }
+
 
 
   // My blog
@@ -159,5 +136,5 @@
         }
       }
     }
-  }
+}
 }

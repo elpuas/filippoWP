@@ -20,11 +20,7 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 */.site-branding h1{margin:0;padding:0}
 .site-branding h1 .custom-logo{min-width:50px}
-<<<<<<< HEAD
-.site-branding h1 .logo-letters{color:#f6f7f6;text-decoration:none;position:relative;font-size:24px;top:-15px}
-=======
 .site-branding h1 .logo-letters{color:#f6f7f6;text-decoration:none;position:relative;top:-15px;font-size:24px}
->>>>>>> HEAD@{1}
 .site-branding h1 .logo-letters:visited{color:#f6f7f6}
 .image-responsive{width:100%}
 html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
@@ -148,19 +144,25 @@ a:hover,a:active{outline:0}
 .comment-navigation .nav-previous,.posts-navigation .nav-previous,.post-navigation .nav-previous{float:left;width:50%}
 .comment-navigation .nav-next,.posts-navigation .nav-next,.post-navigation .nav-next{float:right;text-align:right;width:50%}
 .menu-toggle{width:65px;height:65px;border-radius:100%;border:0;box-shadow:none;background-color:transparent;position:fixed;bottom:25px;right:25px;z-index:1030;padding:0}
-.menu-toggle:focus{border:0}
+.menu-toggle:focus{border:0;outline:0}
 .toggled .menu-toggle{background-color:#f6f7f6;color:#01fbf2}
 .nav-menu{height:100vh;width:50vw;background-color:#01fbf2;position:absolute;z-index:1020;-webkit-transition:all 1s ease;transition:all 1s ease}
+.menu ul{margin:0;padding:0;list-style:none}
+.menu ul li a{font-family:"Roboto",sans-serif;color:white;text-decoration:none;font-size:48px;line-height:1em}
+.filo-twitter-box{position:absolute;bottom:10px;padding:20px}
+.filo-twitter-box .filo-social--box-iconlist{margin:0;padding:0;list-style:none}
+.filo-twitter-box .filo-social--box-iconlist li{display:inline-block}
+.filo-twitter-box .filo-social--box-iconlist li img{max-width:50px;min-width:50px}
+.filo-twitter-box .widget_rotatingtweets_widget .rotatingtweet .rtw_main{font-style:italic;font-size:16px}
+.filo-twitter-box .widget_rotatingtweets_widget .rotatingtweet .rtw_main a{text-decoration:none}
+.filo-twitter-box .widget_rotatingtweets_widget .rotatingtweet .rtw_meta{display:none}
 body,html{height:100%}
 #side-nav{position:fixed;z-index:4;bottom:0;top:0;padding:15px;width:50vw;background:#1be1d9;overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch;-webkit-transition:all 300ms;transition:all 300ms;-webkit-transition-timing-function:cubic-bezier(0.4,0,0.2,1);transition-timing-function:cubic-bezier(0.4,0,0.2,1);-webkit-transform:translateX(100vw);-ms-transform:translateX(100vw);transform:translateX(100vw)}
 #side-nav.visible{-webkit-transform:translateX(50vw);-ms-transform:translateX(50vw);transform:translateX(50vw)}
 #side-nav-mask{position:fixed;height:100%;width:100%;background:rgba(0,0,0,0.5);left:0;top:0;opacity:.1;visibility:hidden;z-index:2;-webkit-transition:all 300ms cubic-bezier(0.4,0,0.2,1);transition:all 300ms cubic-bezier(0.4,0,0.2,1);-webkit-transform:translateZ(0);transform:translateZ(0)}
 #side-nav-mask.visible{-webkit-transition-delay:0;transition-delay:0;visibility:visible;opacity:1}
-#content{position:relative}
-#content .btn-close{height:45px;width:45px;background:0;color:white;border:0;font-size:32px;cursor:pointer}
-#content .btn-close:focus{outline:1px solid gray}
 .bar-c{overflow:hidden;height:30px;width:40px;margin:0 auto;position:relative;cursor:pointer;-webkit-transform:rotate(-90deg);-ms-transform:rotate(-90deg);transform:rotate(-90deg)}
-.bar{height:1px;width:3px;display:inline-block;background-color:#ffffd2;bottom:0;position:absolute;-webkit-animation-duration:500ms;-webkit-animation-play-state:running;-webkit-animation-direction:alternate;-webkit-animation-timing-function:linear;-webkit-animation-iteration-count:infinite}
+.bar{height:1px;width:3px;display:inline-block;background-color:white;bottom:0;position:absolute;-webkit-animation-duration:1200ms;-webkit-animation-play-state:running;-webkit-animation-direction:alternate;-webkit-animation-timing-function:linear;-webkit-animation-iteration-count:infinite}
 .bar.noAnim{height:30px;-webkit-animation:none;-webkit-animation-name:none}
 .bar.noAnim:first-child{-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);margin-left:12px}
 .bar.noAnim:last-child{-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg)}
@@ -203,24 +205,15 @@ body,html{height:100%}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
 .site-footer{height:15vh;text-align:center;padding:25px 0}
-<<<<<<< HEAD
-.page-home{background-image:url("assets/img/4_1.jpg");background-size:cover;background-attachment:fixed;background-blend-mode:multiply;-webkit-transition:all .5s linear;transition:all .5s linear;background-position:-100px}
-.page-home .entry-content{margin:100px 0 0}
-=======
 .page-home{background-image:url("assets/img/4_1.jpg");background-size:cover;background-attachment:fixed;background-blend-mode:multiply;-webkit-transition:all .5s linear;transition:all .5s linear}
 .page-home .entry-content{padding:100px 0 100px}
->>>>>>> HEAD@{1}
 .page-home .entry-content.mc-entry-content .col-span-6:nth-child(1){-ms-grid-column-span:6;-ms-grid-column:col-start;grid-column:col-start / span 6;-ms-grid-row:1;grid-row-start:1;-ms-grid-column:2;grid-column-start:2}
 .page-home .entry-content.mc-entry-content .col-span-6:nth-child(2){-ms-grid-row:1;grid-row-start:1;-ms-grid-column-span:5;-ms-grid-column:7;grid-column:7 / span 5}
 .page-home .entry-content.mc-entry-content h2{text-indent:-5px}
-.page-home .entry-content.wid-entry-content .col-span-6:nth-child(1){-ms-grid-column:1;grid-column-start:1;-ms-grid-row:1;grid-row-start:1}
+.page-home .entry-content.wid-entry-content .col-span-6:nth-child(1){-ms-grid-column:6;grid-column-start:6;-ms-grid-row:1;grid-row-start:1}
 .page-home .entry-content.wid-entry-content .col-span-6:nth-child(2){-ms-grid-column-span:7;-ms-grid-column:col-start;grid-column:col-start / span 7;-ms-grid-column:5;grid-column-start:5;-ms-grid-row:1;grid-row-start:1}
 .page-home .entry-content.wid-entry-content ul{list-style:none;margin:0;padding:0}
 .page-home .entry-content.wid-entry-content ul li h2{padding:0;margin:0}
-<<<<<<< HEAD
-.page-home .entry-content.mw-entry-content .col-span-12 .filo-carousel--layer .my_work.hentry{margin:0;max-height:75vh}
-.page-home .entry-content.mw-entry-content .col-span-12 .filo-carousel--post-link{display:block;max-width:50px}
-=======
 .page-home .entry-content.mw-entry-content .carousel{-ms-grid-column:2;grid-column-start:2}
 .page-home .entry-content.mw-entry-content .carousel .filo-carousel--img{max-width:50%}
 .page-home .entry-content.mw-entry-content .carousel .carousel-caption{max-width:50%;text-align:left;left:50%;right:0;padding:20px;top:25%}
@@ -230,7 +223,6 @@ body,html{height:100%}
 .page-home .entry-content.mw-entry-content .carousel .filo-carousel--controls{text-align:right;margin-top:-50px;padding:0 20px}
 .page-home .entry-content.mw-entry-content .carousel .filo-carousel--controls .carousel-control{background-image:none;position:initial;max-width:50px;display:inline-block;opacity:.9}
 .page-home .entry-content.mw-entry-content .carousel .filo-carousel--controls .carousel-control.left{margin-right:50px}
->>>>>>> HEAD@{1}
 .page-home .entry-content.mb-entry-content{-ms-grid-rows:300px 300px;grid-template-rows:300px 300px}
 .page-home .entry-content.mb-entry-content .col-span-6:nth-child(1){-ms-grid-row-span:2;grid-row-end:span 2;-ms-grid-column:1;grid-column-start:1;-ms-grid-row:1;grid-row-start:1}
 .page-home .entry-content.mb-entry-content .col-span-6:nth-child(1) .mb-meta-data{padding-top:350px}

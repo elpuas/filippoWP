@@ -76,15 +76,6 @@
 	display: block;
 }
 
-/* @media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: block;
-	}
-} */
-
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
@@ -123,6 +114,7 @@
 		padding: 0;
 		&:focus {
 			border: none;
+			outline: none;
 		}
 }
 
@@ -138,4 +130,59 @@
 	position: absolute;
 	z-index: 1020;
 	transition: all 1s ease;
+}
+
+// Menu slideIn
+
+.menu {
+	ul {
+		margin: 0;
+    padding: 0;
+    list-style: none;
+		li {
+			a {
+				font-family: $font__headings;
+		    color: white;
+		    text-decoration: none;
+		    font-size: 48px;
+		    line-height: 1em;
+			}
+		}
+	}
+}
+
+
+// Twitter Feed SlideIn Menu
+
+.filo-twitter-box {
+	position: absolute;
+	bottom: 10px;
+	padding: 20px;
+	.filo-social--box-iconlist {
+		margin: 0;
+    padding: 0;
+    list-style: none;
+		li {
+			display: inline-block;
+			img {
+				max-width: 50px;
+				min-width: 50px;
+			}
+		}
+	}
+	.widget_rotatingtweets_widget {
+		.rotatingtweet {
+			.rtw_main {
+				font-style: italic;
+				font-size: 16px;
+				a {
+          text-decoration: none;
+				}
+			}
+			.rtw_meta {
+				display: none;
+			}
+		}
+
+	}
 }

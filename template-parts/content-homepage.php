@@ -5,20 +5,12 @@
     $imageWID = get_sub_field('wid_image');
     $contentWID = get_sub_field('wid_content');
     ?>
-
-    <!-- * remove feature image
-      <div class="col-span-6">
-        <img class="image-responsive wid-post-image" src="<?php echo $imageWID; ?>" />
-      </div>
-     -->
-           <div class="col-span-6">
+    <div class="col-span-6">
         <?php echo $contentWID; ?>
-      </div>
+    </div>
   <?php endwhile; ?>
 <?php endif; ?>
 </div><!-- .wid-entry-content -->
-
-
 <div class="entry-content mw-entry-content">
   <div id="mw-hp-carousel" class="carousel slide col-span-10" data-ride="carousel">
     <div class="carousel-inner" role="listbox">

@@ -65,25 +65,9 @@ $timing-function: cubic-bezier(.4,0,.2,1);
   }
 }
 
-#content {
-  // height: 100vh;
-  // background-color: lightblue;
+/* #content {
   position: relative;
-
-  .btn-close {
-    height: 45px;
-    width: 45px;
-    background: none;
-    color: white;
-    border: none;
-    font-size: 32px;
-    cursor: pointer;
-
-    &:focus {
-      outline: 1px solid gray;
-    }
-  }
-}
+} */
 
 // Bars
 
@@ -100,7 +84,7 @@ $timing-function: cubic-bezier(.4,0,.2,1);
   height: 1px;
   width: 3px;
   display: inline-block;
-  background-color: #ffffd2;
+  background-color: white;
   bottom: 0;
   position: absolute;
 
@@ -137,7 +121,7 @@ $timing-function: cubic-bezier(.4,0,.2,1);
     -webkit-animation-delay: 600ms;
   }
 
-  -webkit-animation-duration: 500ms;
+  -webkit-animation-duration: 1200ms;
   -webkit-animation-play-state: running;
   -webkit-animation-direction: alternate;
   -webkit-animation-timing-function: linear;

@@ -44,19 +44,19 @@ jQuery( document ).ready(function( $ ) {
       var scrll = $(document).scrollTop();
       // Conditionals
       if ( scrll >= 0 && scrll < whtIDoContent  ) {
-         $('body').css({'background-color' : '#43bda1' , 'background-image' : 'url(http://localhost:8080/elpuas.dev/wp-content/themes/filippo/assets/img/4_1.jpg)'});
+         $('body').css({'background-color' : '#43bda1' , 'background-image' : 'url(https://www.elpuas.com/wp-content/uploads/2017/11/4_1.jpg)'});
          //console.log('top');
       }
       if ( scrll >= whtIDoContent ) {
-         $('body').css({'background-color' : 'orange', 'background-image' : 'url(http://localhost:8080/elpuas.dev/wp-content/themes/filippo/assets/img/7_1.jpg)' });
+         $('body').css({'background-color' : '#f26522', 'background-image' : 'url(https://www.elpuas.com/wp-content/uploads/2017/11/7_1.jpg)' });
           // console.log('what i do section');
       }
-      if (scrll >= mWorkContent) {
-          $('body').css('background-color', 'blue');
+      if ( scrll >= mWorkContent ) {
+          $('body').css({'background-color' : '#0072bc', 'background-image' : 'url(https://www.elpuas.com/wp-content/uploads/2017/11/computer.jpg)' });
            //console.log('my work section');
       }
       if ( scrll >= mBlogContent ) {
-        $('body').css('background-color', 'purple');
+        $('body').css({'background-color' : '#6b539b', 'background-image' : 'none' });
             //console.log('myBlog section');
       }
     });
@@ -64,47 +64,6 @@ jQuery( document ).ready(function( $ ) {
     var viewportHeight = $(window).height();
     $('.mc-entry-content, .wid-entry-content, .mw-entry-content, .mb-entry-content').css('min-height', (viewportHeight));
 
-<<<<<<< HEAD
-  // Change Homepage Background
-  var elements = $('article .entry-content'); //  Get Content Elements
-  // Get Distance From Top Each Element
-  var MCCoord = $(elements[0]).offset().top;
-  var WidCoord = $(elements[1]).offset().top;
-  var MWCoord = $(elements[2]).offset().top;
-  var MBCoord = $(elements[3]).offset().top;
-  // Scroll Function
-  $(document).scroll(function() {
-    // Round to the Nearest Integer
-    var mContent = Math.round(MCCoord);
-    var whtIDoContent = Math.round(WidCoord);
-    var mWorkContent = Math.round(MWCoord);
-    var mBlogContent = Math.round(MBCoord);
-    // Scroll Variable
-    var scrll = $(document).scrollTop();
-    // Conditionals
-    if ( scrll >= 0 && scrll < whtIDoContent  ) {
-       $('body').css({'background-color' : '#43bda1' , 'background-image' : 'url(http://localhost:8080/elpuas.dev/wp-content/themes/filippo/assets/img/4_1.jpg)'});
-       // console.log('top');
-    }
-    if ( scrll >= whtIDoContent ) {
-       $('body').css({'background-color' : 'orange', 'background-image' : 'url(http://localhost:8080/elpuas.dev/wp-content/themes/filippo/assets/img/7_1.jpg)' });
-         // console.log('what i do section');
-    }
-    if (scrll >= mWorkContent) {
-        $('body').css('background-color', 'blue');
-         // console.log('my work section');
-    }
-    if ( scrll >= mBlogContent ) {
-      $('body').css('background-color', 'purple');
-          // console.log('myBlog section');
-    }
-  });
-  // Calculate Vierport height
-
-     var viewportHeight = $(window).height();
-     $('.entry-content').css('min-height', (viewportHeight / 1.5 ));
-
-=======
    // Document Ready Function
 
    var clicked = true;
@@ -117,5 +76,4 @@ jQuery( document ).ready(function( $ ) {
           clicked = true;
         }
       });
->>>>>>> HEAD@{1}
 });

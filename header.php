@@ -19,12 +19,21 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class( ); ?>>
+	<div class="filo-body-content"></div>
 	<div id="side-nav">
 	<?php
 		wp_nav_menu( array() );
 	?>
+	<div class="filo-twitter-box">
 	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Menu Widget") ) : ?>
-<?php endif;?>
+		<?php endif;?>
+		<ul class="filo-social--box-iconlist">
+ 		 <li><img src="<?php echo get_bloginfo('template_url') ?>/assets/img/twitter.svg"></li>
+ 		 <li><img src="<?php echo get_bloginfo('template_url') ?>/assets/img/twitter.svg"></li>
+ 		 <li><img src="<?php echo get_bloginfo('template_url') ?>/assets/img/twitter.svg"></li>
+ 		 <li><img src="<?php echo get_bloginfo('template_url') ?>/assets/img/twitter.svg"></li>
+ 	</ul>
+ </div>
 </div>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'filippo' ); ?></a>

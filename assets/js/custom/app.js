@@ -44,19 +44,19 @@ jQuery( document ).ready(function( $ ) {
       var scrll = $(document).scrollTop();
       // Conditionals
       if ( scrll >= 0 && scrll < whtIDoContent  ) {
-         $('body').css({'background-color' : '#43bda1' , 'background-image' : 'url(http://localhost:8080/elpuas.dev/wp-content/themes/filippo/assets/img/4_1.jpg)'});
+         $('body').css({'background-color' : '#43bda1' , 'background-image' : 'url(https://www.elpuas.com/wp-content/uploads/2017/11/4_1.jpg)'});
          //console.log('top');
       }
       if ( scrll >= whtIDoContent ) {
-         $('body').css({'background-color' : 'orange', 'background-image' : 'url(http://localhost:8080/elpuas.dev/wp-content/themes/filippo/assets/img/7_1.jpg)' });
+         $('body').css({'background-color' : '#f26522', 'background-image' : 'url(https://www.elpuas.com/wp-content/uploads/2017/11/7_1.jpg)' });
           // console.log('what i do section');
       }
-      if (scrll >= mWorkContent) {
-          $('body').css('background-color', 'blue');
+      if ( scrll >= mWorkContent ) {
+          $('body').css({'background-color' : '#0072bc', 'background-image' : 'url(https://www.elpuas.com/wp-content/uploads/2017/11/computer.jpg)' });
            //console.log('my work section');
       }
       if ( scrll >= mBlogContent ) {
-        $('body').css('background-color', 'purple');
+        $('body').css({'background-color' : '#6b539b', 'background-image' : 'none' });
             //console.log('myBlog section');
       }
     });
