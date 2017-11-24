@@ -5,19 +5,13 @@
     $imageWID = get_sub_field('wid_image');
     $contentWID = get_sub_field('wid_content');
     ?>
-<<<<<<< HEAD
+
     <!-- * remove feature image
       <div class="col-span-6">
         <img class="image-responsive wid-post-image" src="<?php echo $imageWID; ?>" />
       </div>
      -->
-=======
-      <!-- <div class="col-span-6">
-        <img class="image-responsive wid-post-image" src="<?php echo $imageWID; ?>" />
-      </div>
-    -->
->>>>>>> HEAD@{1}
-      <div class="col-span-6">
+           <div class="col-span-6">
         <?php echo $contentWID; ?>
       </div>
   <?php endwhile; ?>
@@ -26,11 +20,7 @@
 
 
 <div class="entry-content mw-entry-content">
-<<<<<<< HEAD
-  <div id="mw-carousel" class="carousel slide col-span-12" data-ride="carousel">
-=======
   <div id="mw-hp-carousel" class="carousel slide col-span-10" data-ride="carousel">
->>>>>>> HEAD@{1}
     <div class="carousel-inner" role="listbox">
     <?php
     $myWorks = array( 'post_type' => 'my_work', 'posts_per_page' => 3 );
@@ -46,7 +36,7 @@
                 <?php the_excerpt(); ?>
                 <span class="filo-carousel--post-link"><a href="<?php the_permalink(); ?>"><img src="<?php echo get_bloginfo('template_url') ?>/assets/img/open.svg"></a></span>
             </div><!-- carousel-caption -->
-            
+
         </div><!-- .item #<?php the_ID(); ?> -->
     <?php
     $count++;
