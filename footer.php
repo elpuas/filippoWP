@@ -12,7 +12,13 @@
 ?>
 
 	</div><!-- #content -->
-
+  <button class="menu-toggle">
+		<div class="bar-c">
+			  <div id="bar-1" class="bar"></div>
+			  <div id="bar-2" class="bar"></div>
+			  <div id="bar-3" class="bar"></div>
+	</div>
+  </button>
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'filippo' ) ); ?>"><?php

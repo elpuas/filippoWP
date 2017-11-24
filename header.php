@@ -23,6 +23,8 @@
 	<?php
 		wp_nav_menu( array() );
 	?>
+	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Menu Widget") ) : ?>
+<?php endif;?>
 </div>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'filippo' ); ?></a>
@@ -33,9 +35,6 @@
 			<a class="logo-letters" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 		 </h1>
 		</div><!-- .site-branding -->
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle"><img src="<?php echo get_bloginfo('template_url') ?>/assets/img/open-menu.svg"></button>
-		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 	<div id="side-nav-mask"></div>
 	<div id="content" class="site-content">
