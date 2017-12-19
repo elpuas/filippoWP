@@ -52,7 +52,9 @@
 
 <div class="entry-content mb-entry-content">
     <?php
-    $myBlog = array('post_per_page' => 3, 'category_name' => 'blog');
+    $myBlog = array(
+    'posts_per_page' => 3,
+    'category_name' => 'blog');
     $blogLoop = new WP_Query($myBlog);
     while ( $blogLoop -> have_posts() ) : $blogLoop -> the_post(); ?>
     <div class="col-span-6">

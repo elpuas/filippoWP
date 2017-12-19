@@ -64,16 +64,12 @@ jQuery( document ).ready(function( $ ) {
     var viewportHeight = $(window).height();
     $('.mc-entry-content, .wid-entry-content, .mw-entry-content, .mb-entry-content').css('min-height', (viewportHeight));
 
-   // Document Ready Function
+   // Menu Toogle Function
+      $(".menu-toggle").click( function() {
+        $(".bar").toggleClass("noAnim");
+    });
 
-   var clicked = true;
-      $(".bar-c").click( function() {
-        if (clicked) {
-          $(".bar").addClass("noAnim");
-          clicked = false;
-        } else {
-          $(".bar").removeClass("noAnim");
-          clicked = true;
-        }
-      });
+    // Add Animation to Menu Hover
+      $('.menu li a').on('hover').addClass('pulse');
+
 });

@@ -132,24 +132,29 @@
 	transition: all 1s ease;
 }
 
+.site-branding h1 {
+	position: fixed;
+}
+
 // Menu slideIn
 
-.menu {
-	ul {
-		margin: 0;
+
+	ul.menu {
+		margin: 50px 25px 0;
     padding: 0;
     list-style: none;
-		li {
+		li { margin-bottom: 25px;
 			a {
 				font-family: $font__headings;
 		    color: white;
 		    text-decoration: none;
 		    font-size: 48px;
 		    line-height: 1em;
+				&:hover {
+					}
+				}
 			}
 		}
-	}
-}
 
 
 // Twitter Feed SlideIn Menu

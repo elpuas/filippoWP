@@ -147,8 +147,10 @@ a:hover,a:active{outline:0}
 .menu-toggle:focus{border:0;outline:0}
 .toggled .menu-toggle{background-color:#f6f7f6;color:#01fbf2}
 .nav-menu{height:100vh;width:50vw;background-color:#01fbf2;position:absolute;z-index:1020;-webkit-transition:all 1s ease;transition:all 1s ease}
-.menu ul{margin:0;padding:0;list-style:none}
-.menu ul li a{font-family:"Roboto",sans-serif;color:white;text-decoration:none;font-size:48px;line-height:1em}
+.site-branding h1{position:fixed}
+ul.menu{margin:50px 25px 0;padding:0;list-style:none}
+ul.menu li{margin-bottom:25px}
+ul.menu li a{font-family:"Roboto",sans-serif;color:white;text-decoration:none;font-size:48px;line-height:1em}
 .filo-twitter-box{position:absolute;bottom:10px;padding:20px}
 .filo-twitter-box .filo-social--box-iconlist{margin:0;padding:0;list-style:none}
 .filo-twitter-box .filo-social--box-iconlist li{display:inline-block}
