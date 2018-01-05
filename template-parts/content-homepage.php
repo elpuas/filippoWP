@@ -15,7 +15,7 @@
 <?php endif; ?>
 </div><!-- .wid-entry-content -->
 <div class="entry-content mw-entry-content">
-  <div id="mw-hp-carousel" class="carousel slide col-span-10" data-ride="carousel">
+  <div id="mw-hp-carousel" class="carousel slide carousel-fade col-span-8" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
     <?php
     $myWorks = array( 'post_type' => 'my_work', 'posts_per_page' => 3 );
@@ -55,11 +55,11 @@
       ?>
       <!-- Controls -->
       <div class="filo-carousel--controls">
-      <a class="left carousel-control" href="#mw-hp-carousel" role="button" data-slide="prev">
+      <a class="left carousel-control" data-target="#mw-hp-carousel" href="javascript:void(0)" role="button" data-slide="prev">
       <img src="<?php echo get_bloginfo('template_url') ?>/assets/img/arrow-left.svg">
       <span class="sr-only">Previous</span>
       </a>
-      <a class="right carousel-control" href="#mw-hp-carousel" role="button" data-slide="next">
+      <a class="right carousel-control" data-target="#mw-hp-carousel" href="javascript:void(0)" role="button" data-slide="next">
       <img src="<?php echo get_bloginfo('template_url') ?>/assets/img/arrow-right.svg">
       <span class="sr-only">Next</span>
       </a>

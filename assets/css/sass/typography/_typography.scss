@@ -6,7 +6,7 @@ optgroup,
 textarea {
 	color: $color__chocolate;
 	font-family: $font__main;
-	@include fluid-type(16px, 18px);
+	@include fluid-type(14px, 16px);
 	line-height: $font__line-height-body;
 }
 

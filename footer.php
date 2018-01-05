@@ -30,10 +30,10 @@
 				/* translators: 1: Theme name, 2: Theme author. */
 				printf( esc_html__( 'Theme: %1$s by %2$s.', 'filippo' ), 'filippo', '<a href="https://elpuas.com">elpuas</a>' );
 			?>
+			<br/> <span class="fili-scrollUp">Scroll to Top</span>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
-
 <?php wp_footer(); ?>
 
 </body>
