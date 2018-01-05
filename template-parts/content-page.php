@@ -38,7 +38,7 @@ $post_slug=$post->post_name;?>
 		<?php /* the_post_thumbnail('full', array('class' => 'image-responsive')); */ ?>
 		</div>
 	</div><!-- .mc-content -->
-	<?php if(is_home) {
+	<?php if( is_front_page() ) {
 			get_template_part('template-parts/content-homepage');
 	 } else {
 			// Do Nothing

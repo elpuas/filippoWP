@@ -133,8 +133,8 @@ function filippo_scripts() {
 		 wp_register_script('jquery', get_stylesheet_directory_uri() . '/js/jquery-3.2.1.min.js');
 		 wp_enqueue_script('jquery', '3.2.1', true);
 	}
-	wp_enqueue_script( 'filippo-vendor-scripts', get_template_directory_uri() . '/vendors.min.js', array(), '1.0.0', true );
-	wp_enqueue_script( 'filippo-scripts', get_template_directory_uri() . '/custom.js', array(), '1.0.1', true );
+	wp_enqueue_script( 'filippo-vendor-scripts', get_template_directory_uri() . '/vendors.min.js', array(), get_the_time(), true );
+	wp_enqueue_script( 'filippo-scripts', get_template_directory_uri() . '/custom.js', array(), get_the_time(), true );
 	// wp_enqueue_script( 'filippo-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'filippo-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );

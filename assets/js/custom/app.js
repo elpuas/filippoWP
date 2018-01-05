@@ -44,19 +44,19 @@ jQuery( document ).ready(function( $ ) {
       var scrll = $(document).scrollTop();
       // Conditionals
       if ( scrll >= 0 && scrll < whtIDoContent  ) {
-         $('body').css({'background-color' : '#43bda1' , 'background-image' : 'url(https://www.elpuas.com/wp-content/uploads/2017/11/4_1.jpg)'});
+         $('.page-home').css({'background-image' : 'url(http://localhost:8080/elpuas/wp-content/uploads/2018/01/myhome.gif)'});
          //console.log('top');
       }
       if ( scrll >= whtIDoContent ) {
-         $('body').css({'background-color' : '#f26522', 'background-image' : 'url(https://www.elpuas.com/wp-content/uploads/2017/11/7_1.jpg)' });
+         $('.page-home').css({'background-image' : 'none' });
           // console.log('what i do section');
       }
       if ( scrll >= mWorkContent ) {
-          $('body').css({'background-color' : '#0072bc', 'background-image' : 'url(https://www.elpuas.com/wp-content/uploads/2017/11/computer.jpg)' });
+          $('.page-home').css({'background-image' : 'url(http://localhost:8080/elpuas/wp-content/uploads/2018/01/MW.jpg)' });
            //console.log('my work section');
       }
       if ( scrll >= mBlogContent ) {
-        $('body').css({'background-color' : '#6b539b', 'background-image' : 'none' });
+        $('.page-home').css({'background-image' : 'none' });
             //console.log('myBlog section');
       }
     });
@@ -70,6 +70,27 @@ jQuery( document ).ready(function( $ ) {
     });
 
     // Add Animation to Menu Hover
-      $('.menu li a').on('hover').addClass('pulse');
+      $('.menu li').hover(
+     function(){ $(this).addClass('animated infinite pulse') },
+     function(){ $(this).removeClass('animated infinite pulse') }
+   )
+
+      if( $('.filo-carousel--post-link').length )         // use this if you are using class to check
+      {
+        $('.filo-carousel--post-link a img').hover(
+       function(){ $(this).addClass('animated infinite tada') },
+       function(){ $(this).removeClass('animated infinite tada') }
+     )
+   }
+
+  // Fire Div On Viewport Show
+ /*
+
+  $(".my-element-class").inViewport(function(px){
+    if(px) $(this).addClass("triggeredCSS3") ;
+});
+
+*/
+
 
 });

@@ -6,6 +6,9 @@
     $contentWID = get_sub_field('wid_content');
     ?>
     <div class="col-span-6">
+        <img src="<?php echo $imageWID; ?>" class="img-responsive"/>
+    </div>
+    <div class="col-span-6">
         <?php echo $contentWID; ?>
     </div>
   <?php endwhile; ?>
@@ -25,8 +28,24 @@
           </div>
             <div class="carousel-caption">
                 <h2> <?php the_title(); ?> </h2>
+                 <?php // Get the Terms  ?>
+                <?php
+                $terms = get_the_terms($post->ID, 'work_category' ); // Get Taxonomy Array
+                $terms = esc_html( $terms[0]->name ); // Get Taxonomy Name
+                echo '<h3>' . $terms . '</h3>';  // Print Result
+                ?>
                 <?php the_excerpt(); ?>
-                <span class="filo-carousel--post-link"><a href="<?php the_permalink(); ?>"><img src="<?php echo get_bloginfo('template_url') ?>/assets/img/open.svg"></a></span>
+                <?php /*
+
+                $posttags = get_the_tags();
+                    if ($posttags) {
+                      foreach($posttags as $tag) {
+                        echo $tag->name . ' ';
+                      }
+                    }
+                    *
+                    */ ?>
+                    <span class="filo-carousel--post-link"><a <?php post_class() ?> href="<?php the_permalink(); ?>"><img class="filo-carousel--post-link-image" src="<?php echo get_bloginfo('template_url') ?>/assets/img/open.svg"></a></span>
             </div><!-- carousel-caption -->
 
         </div><!-- .item #<?php the_ID(); ?> -->
