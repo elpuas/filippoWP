@@ -1,4 +1,4 @@
-<div class="entry-content wid-entry-content">
+<div id="filiwid" class="entry-content wid-entry-content">
   <?php if( have_rows('what_i_do_field') ):
     while( have_rows('what_i_do_field') ): the_row();
     // vars
@@ -13,8 +13,9 @@
     </div>
   <?php endwhile; ?>
 <?php endif; ?>
+<span id="filimwlink" class="arrow animated infinite pulse"></span>
 </div><!-- .wid-entry-content -->
-<div class="entry-content mw-entry-content">
+<div id="filimw" class="entry-content mw-entry-content">
   <div id="mw-hp-carousel" class="carousel slide carousel-fade col-span-8" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
     <?php
@@ -28,13 +29,17 @@
           </div>
             <div class="carousel-caption">
                 <h2> <?php the_title(); ?> </h2>
-                 <?php // Get the Terms  ?>
-                <?php
-                $terms = get_the_terms($post->ID, 'work_category' ); // Get Taxonomy Array
-                $terms = esc_html( $terms[0]->name ); // Get Taxonomy Name
+                <?php // get The Terms|Category
+                $terms = get_the_term_list( $post->ID, 'work_category', '', ',' );
+                // $terms = get_the_terms($post->ID, 'work_category' ); // Get Taxonomy Array
+                // $terms = esc_html( $terms[0]->name ); // Get Taxonomy Name
                 echo '<h3>' . $terms . '</h3>';  // Print Result
                 ?>
-                <?php the_excerpt(); ?>
+                <?php // Get the Terms|Tags
+                $filiTags = get_the_term_list( get_the_ID(), 'work_tags', '', ',' ); // Get Tags List
+                echo '<h4>' . $filiTags . '</h4>';  // Print Result
+                ?>
+                <?php // the_excerpt(); ?>
                 <?php /*
 
                 $posttags = get_the_tags();
@@ -66,10 +71,11 @@
     </div>
     </div><!-- .carousel-inner -->
   </div><!-- .carousel -->
+  <span id="filimblink" class="arrow animated infinite pulse"></span>
 </div><!-- .mw-entry-content -->
 
 
-<div class="entry-content mb-entry-content">
+<div id="filimb" class="entry-content mb-entry-content">
     <?php
     $myBlog = array(
     'posts_per_page' => 3,

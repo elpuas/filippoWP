@@ -24,7 +24,7 @@ $post_slug=$post->post_name;?>
 			 ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content mc-entry-content">
+	<div class="entry-content <?php if( is_front_page() ) {  echo 'mc-entry-content'; }?> ">
 		<div class="col-span-6">
 		<?php
 			the_content();
@@ -37,6 +37,9 @@ $post_slug=$post->post_name;?>
 		<div class="col-span-6">
 		<?php /* the_post_thumbnail('full', array('class' => 'image-responsive')); */ ?>
 		</div>
+		<?php if( is_front_page() ) { ?>
+			<span id="filiwidlink" class="arrow animated infinite pulse"></span>
+		<?php } ?>
 	</div><!-- .mc-content -->
 	<?php if( is_front_page() ) {
 			get_template_part('template-parts/content-homepage');
