@@ -1,0 +1,56 @@
+/* Login Form */
+
+body.login {
+  background-image: url('');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+  }
+  body.login::after {
+    content: ' ';
+    display:block;
+    background-image: url()
+  }
+body.login div#login {}
+body.login div#login h1 {}
+body.login div#login h1 a {
+  width: 320px;
+  background-image: none,url('');
+  background-size: 100%;
+}
+body.login div#login form#loginform {
+  border-radius: 15px;
+}
+body.login div#login form#loginform p {}
+body.login div#login form#loginform p label {}
+body.login div#login form#loginform input {}
+body.login div#login form#loginform input#user_login {}
+body.login div#login form#loginform input#user_pass {}
+body.login div#login form#loginform p.forgetmenot {}
+body.login div#login form#loginform p.forgetmenot input#rememberme {}
+body.login div#login form#loginform p.submit {}
+body.login div#login form#loginform p.submit input#wp-submit {
+  background-color: red;
+  box-shadow: none;
+  border: 0;
+  text-shadow: none;
+}
+body.login div#login p#nav {
+  text-align: center;
+}
+body.login div#login p#nav a {
+  color: #F6E9D6;
+}
+body.login div#login p#backtoblog {
+  text-align: center;
+}
+body.login div#login p#backtoblog a {
+  color: #F6E9D6;
+}
+
+
+/* Dashboard Styles */
+
+
+/* WYSIWYG & TinyMCE Styles */

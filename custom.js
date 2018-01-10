@@ -21,6 +21,8 @@ jQuery( document ).ready(function( $ ) {
         $sideNav.toggleClass('visible');
         $sideNavMask.toggleClass('visible');
       });
+      if ($('article').find('.entry-content').length > 3 ) {
+
 
     // Change Homepage Background
     var elements = $('article .entry-content'); //  Get Content Elements
@@ -40,7 +42,7 @@ jQuery( document ).ready(function( $ ) {
       var scrll = $(document).scrollTop();
       // Conditionals
       if ( scrll >= 0 && scrll < whtIDoContent  ) {
-         $('.page-home').css({'background-image' : 'url(http://localhost:8080/elpuas/wp-content/uploads/2018/01/myhome.gif)'});
+         $('.page-home').css({'background-image' : 'url(/elpuas/wp-content/uploads/2018/01/home-edited-video-blue.gif)'});
          //console.log('top');
       }
       if ( scrll >= whtIDoContent ) {
@@ -48,7 +50,7 @@ jQuery( document ).ready(function( $ ) {
           // console.log('what i do section');
       }
       if ( scrll >= mWorkContent ) {
-          $('.page-home').css({'background-image' : 'url(http://localhost:8080/elpuas/wp-content/uploads/2018/01/MW.jpg)' });
+          $('.page-home').css({'background-image' : 'none' });
            //console.log('my work section');
       }
       if ( scrll >= mBlogContent ) {
@@ -59,7 +61,7 @@ jQuery( document ).ready(function( $ ) {
     // Calculate Viewport Height;
     var viewportHeight = $(window).height();
     $('.mc-entry-content, .wid-entry-content, .mw-entry-content, .mb-entry-content').css('min-height', (viewportHeight));
-
+}
    // Menu Toogle Function
       $(".menu-toggle").click( function() {
         $(".bar").toggleClass("noAnim");
@@ -76,14 +78,33 @@ jQuery( document ).ready(function( $ ) {
        function(){ $(this).removeClass('animated infinite tada') }
      );
    }
+
+   function goToByScroll(id){
+             // Remove "link" from the ID
+           id = id.replace("link", "");
+             // Scroll
+           $('html,body').animate({
+               scrollTop: $("#"+id).offset().top},
+               'slow');
+       }
+
+       $('.arrow').click(function(e) {
+             // Prevent a page reload when a link is pressed
+           e.preventDefault();
+             // Call the scroll function
+           goToByScroll($(this).attr("id"));
+       });
+
+
+
  /*
 
    $(".entry-content").each(function(){
-       $(this).append('<span class="arrow animated infinite pulse"></span>').click(function(){
+       $(this).append('<span id="" class="arrow animated infinite pulse"></span>').click(function(){
        $('html,body').animate({ scrollTop:$(this).next().offset().top}, 'slow')
    });
   })
-  
+
 */
    $('.entry-content').addClass("hidden").viewportChecker({
        classToAdd: 'visible animated bounceInUp',

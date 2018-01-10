@@ -192,3 +192,41 @@ function add_slug_body_class( $classes ) {
 	return $classes;
 	}
 	add_filter( 'body_class', 'add_slug_body_class' );
+
+	/**
+	* Login | Admin Custom Styles
+	*/
+
+	/**
+	* Admin footer modification
+	*/
+	function remove_footer_admin ()
+	{
+	    echo '<span id="footer-thankyou">Developed by <a href="https://www.elpuas.com" target="_blank">el.puas();</a></span>';
+	}
+	add_filter('admin_footer_text', 'remove_footer_admin');
+
+	add_editor_style();
+
+	function fili_login_styles() {
+	    wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/editor-style.css' );
+	}
+	add_action( 'login_enqueue_scripts', 'fili_login_styles' );
+
+	/**
+ * Registers an editor stylesheet for the theme.
+ */
+function fili_theme_add_editor_styles() {
+    add_editor_style( 'editor-style.css' );
+}
+
+add_action( 'admin_init', 'fili_theme_add_editor_styles' );
+
+/**
+* Registers an editor stylesheet for the theme.
+*/
+
+function fili_editor_style() {
+  wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/editor-style.css' );
+}
+add_action('admin_head', 'fili_editor_style');

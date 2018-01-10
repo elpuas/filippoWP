@@ -1,5 +1,5 @@
 .page-home {
-     background-image: url('assets/img/myhome.gif');
+     background-image: url('/elpuas/wp-content/uploads/2018/01/home-edited-video-blue.gif');
      background-size: cover;
      background-attachment: fixed;
     // background-blend-mode: multiply;
@@ -15,6 +15,7 @@
     opacity: 0.2;
     align-self: end;
     grid-column-start: 7;
+    cursor: pointer;
     }
     &.mc-entry-content {
       .col-span-6:nth-child(1) {
@@ -29,11 +30,16 @@
       h2 {
         text-indent: -5px;
         color: $color__chocolate;
+        span {
+          background-color: #08fafa;
+          padding: 10px;
+        }
       }
     }
 
   // What I Do
   &.wid-entry-content {
+    padding: 20vh 0 100px;
     .col-span-6:nth-child(1) {
         grid-column-start: 2;
         grid-row-start: 1;
@@ -64,17 +70,34 @@
   }
   // My Work
 &.mw-entry-content {
+  padding: 22vh 0 100px;
    .arrow {
       align-self: end;
-    }
+      z-index: 1040;
+      grid-column-start: 7;
+      grid-row-start: 1;
+      }
   .carousel {
     grid-column-start: 3;
-    .filo-carousel--img {
+    grid-row-start: 1;
+    .item {
+      &:nth-child(2){
+        .filo-carousel--img {
+
+          img {
+            min-width: initial;
+            max-width: initial;
+            width: 100%;
+          }
+        }
+      }
+      .filo-carousel--img {
       max-width: 50%;
       overflow: hidden;
       max-height: 69vh;
       min-height: 69vh;
     }
+  }
     .carousel-caption {
       max-width: 50%;
       text-align: left;
@@ -82,12 +105,16 @@
       right: 0;
       padding: 20px;
       top: 25%;
-      h2, h3, p {
+      h2, h3, h3 a, h4, h4 a, p {
         margin: 0;
         padding: 0;
         color: $color__chocolate;
         text-shadow: none;
       }
+      h3 {
+        @include fluid-type(28px, 36px);
+      }
+      h4 { @include fluid-type(22px, 24px);}
       p {
         font-size: 16px;
       }
@@ -142,6 +169,7 @@
 
   // My blog
     &.mb-entry-content {
+      padding: 10vh 0 100px;
       .arrow {
         grid-column-start: 7;
       }
@@ -158,6 +186,18 @@
         &:nth-child(2) {
           grid-column-start: 7;
           grid-row-start: 1;
+          .mb-container {
+            background-color: red;
+            background-blend-mode: multiply;
+            .mb-meta-data {
+              h2, p {
+                color: white;
+              }
+              span {
+                fill: white;
+              }
+            }
+          }
         }
         &:nth-child(3) {
           grid-column-start: 7;
