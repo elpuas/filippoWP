@@ -230,3 +230,54 @@ function fili_editor_style() {
   wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/editor-style.css' );
 }
 add_action('admin_head', 'fili_editor_style');
+
+/**
+* Another Shortcode
+*/
+function speedbump_link_shortcode( $atts, $content = null ) {
+	$a = shortcode_atts( array(
+		'link' => 'your link',
+	), $atts );
+
+	return '<a class="dt-button cfcu-dt-btn" href="' . esc_attr($a['link']) . '">' . $content . '</a>';
+}
+add_shortcode( 'speedbump', 'speedbump_link_shortcode' );
+
+// Add Shortcode Btn to TinyMCE
+
+function shortcode_button_script()
+{
+    if(wp_script_is("quicktags"))
+    {
+        ?>
+            <script type="text/javascript">
+
+
+                QTags.addButton(
+                    "code_shortcode",
+                    "Speedbump Link",
+                    callback
+                );
+
+                function callback()
+                {
+                    var selected_text = "Link Content"
+                    QTags.insertContent('[speedbump link="yourlink"]' +  selected_text + '[/speedbump]');
+                }
+            </script>
+        <?php
+    }
+}
+
+add_action("admin_print_footer_scripts", "shortcode_button_script");
+
+add_action('admin_menu', 'custom_menu');
+
+function custom_menu(){
+    add_menu_page('Custom Menu', 'Custom Menu', 'manage_options', 'custom-menu-slug', 'custom_menu_page_display');
+}
+
+function custom_menu_page_display(){
+    echo '<h1>Hello World</h1>';
+    echo '<p>This is a custom page</p>';
+}

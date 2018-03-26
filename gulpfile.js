@@ -47,6 +47,7 @@ var styleSRC                = './assets/css/sass/style.scss'; // Path to main .s
 var styleDestination        = './'; // Path to place the compiled CSS file.
 // Default set to root folder.
 
+
 // JS Vendor related.
 var jsVendorSRC             = './assets/js/vendor/*.js'; // Path to JS vendor folder.
 var jsVendorDestination     = './'; // Path to place the compiled JS vendors file.
@@ -204,6 +205,7 @@ gulp.task( 'browser-sync', function() {
     .pipe( browserSync.stream() )// Reloads style.min.css if that is enqueued.
     .pipe( notify( { message: 'TASK: "styles" Completed! 💯', onLast: true } ) )
  });
+
 
 
  /**
